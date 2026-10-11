@@ -153,7 +153,7 @@
   });
 
   /* ---------- cookie-uri + Google Analytics (doar dupa acord) ---------- */
-  var GA_ID = 'G-ZPYGVTJYLH', KEY = 'dmp-consent';
+  var GA_ID = 'G-BK6D4WMY0W', KEY = 'dmp-consent';
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
