@@ -329,3 +329,5 @@ tbody th { font-weight: 600; color: var(--ink); }
 .clip-embed { display: flex; justify-content: center; }
 .clip-embed > * { max-width: 100%; }
 .clip-open { font-size: .92rem; padding: 8px 4px 0; text-align: center; }
+
+.mark-img { display: block; flex: none; width: 44px; height: 44px; border-radius: 10px; object-fit: cover; }
