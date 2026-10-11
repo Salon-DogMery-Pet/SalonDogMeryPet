@@ -65,7 +65,7 @@
   <div class="wrap">
     <p class="crumbs"><a href="index.html">Acasa</a> / Galerie</p>
     <h1>Galerie</h1>
-    <p>Poze si clipuri cu cainii toaletati, pe retelele salonului.</p>
+    <p>Poze si clipuri cu cainii tunsi si ingrijiti, pe retelele salonului.</p>
   </div>
 </section>
 {%- for bl_s in site.data.pagina_galerie.sectiuni -%}
@@ -85,10 +85,10 @@
   <div class="wrap">
     <div class="section-head">
       <h2{{ bl_h2 }}>Vezi lucrarile noastre</h2>
-      <p class="muted">Cele mai noi poze si clipuri cu catelusi inainte si dupa toaletaj sunt pe paginile salonului. Alege reteaua preferata.</p>
+      <p class="muted">Cele mai noi poze si clipuri cu catelusi inainte si dupa tuns sunt pe paginile salonului. Alege reteaua preferata.</p>
     </div>
     <div class="social-cards">{%- if ret_ig != '' %}
-      <a class="social-card" href="{{ ret_ig | escape }}" rel="noopener"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-instagram"/></svg><h3>Instagram</h3><p>Poze si clipuri cu cainii toaletati.</p><span>@salon_dogmery_pet</span></a>{%- endif %}{%- if ret_tt != '' %}
+      <a class="social-card" href="{{ ret_ig | escape }}" rel="noopener"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-instagram"/></svg><h3>Instagram</h3><p>Poze si clipuri cu cainii tunsi si ingrijiti.</p><span>@salon_dogmery_pet</span></a>{%- endif %}{%- if ret_tt != '' %}
       <a class="social-card" href="{{ ret_tt | escape }}" rel="noopener"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-tiktok"/></svg><h3>TikTok</h3><p>Clipuri scurte din salon.</p><span>@salon_dogmery_pet</span></a>{%- endif %}{%- if ret_fb != '' %}
       <a class="social-card" href="{{ ret_fb | escape }}" rel="noopener"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-facebook"/></svg><h3>Facebook</h3><p>Postari, noutati si recenzii.</p><span>Salon DogMery Pet</span></a>{%- endif %}
     </div>

@@ -9,7 +9,7 @@ intrebari:
     raspuns: "Ne suni la [telefon] sau ne scrii pe WhatsApp, iar impreuna alegem ziua si ora."
     pe_prima_pagina: true
   - intrebare: "Primiti orice caine?"
-    raspuns: "Nu. Nu folosim anestezic, deci nu primim caini foarte agitati sau agresivi. Nu toaletam nici caini cu probleme dermatologice sau femele gestante."
+    raspuns: "Nu. Nu folosim anestezic, deci nu primim caini foarte agitati sau agresivi. Nu ingrijim nici caini cu probleme dermatologice sau femele gestante."
     pe_prima_pagina: false
   - intrebare: "Unde gasesc o frizerie canina in Pitesti?"
     raspuns: "Frizeria canina DogMery Pet este pe Str. Tache Ionescu nr. 27, bl. Q2, Pitesti. Programari la [telefon] sau pe WhatsApp."
