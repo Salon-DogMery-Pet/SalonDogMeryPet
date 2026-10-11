@@ -314,6 +314,7 @@
       <div class="tile"><blockquote>&bdquo;{{ r.text | escape }}&rdquo;</blockquote><cite>{{ r.autor | escape }}</cite></div>
 {%- endfor %}
     </div>
+    {% include recenzie-card.html %}
   </div>
 </section>{% endif %}
 {%- when 'intrebari' %}

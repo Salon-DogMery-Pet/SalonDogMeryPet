@@ -185,6 +185,7 @@ content:
       - {name: numar, label: "Numar de recenzii", type: number}
       - {name: luna, label: "Luna si anul notei (ex. octombrie 2026)", type: string}
       - {name: link, label: "Link catre recenziile de pe Google Maps", type: string}
+      - {name: link_recenzie, label: "Link pentru a lasa o recenzie (butonul 'Lasa o recenzie pe Google'; gol = fara buton)", type: string}
       - name: recenzii
         label: Recenzii afisate pe site
         type: object

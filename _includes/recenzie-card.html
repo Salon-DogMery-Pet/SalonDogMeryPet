@@ -1,0 +1,10 @@
+{%- assign rl = site.data.recenzii.link_recenzie -%}{%- if rl and rl != '' -%}
+<div class="review-cta">
+  <div>
+    <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <h3>Ai fost la noi?</h3>
+    <p>O parere pe Google ii ajuta pe ceilalti stapani de caini sa ne gaseasca si ne spune ce facem bine. Dureaza un minut.</p>
+  </div>
+  <a class="btn" href="{{ rl | escape }}" target="_blank" rel="noopener">Lasa o recenzie pe Google</a>
+</div>
+{%- endif -%}

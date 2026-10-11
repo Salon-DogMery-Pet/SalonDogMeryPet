@@ -267,6 +267,11 @@ tbody th { font-weight: 600; color: var(--ink); }
 /* recenzii */
 .tile blockquote { margin: 0 0 12px; font-size: 1.02rem; color: var(--text); }
 .tile cite { font-style: normal; font-weight: 700; color: var(--pink-deep); font-size: .92rem; }
+.review-cta { margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 26px 30px; border-radius: var(--radius); background: linear-gradient(135deg, var(--pink-soft), #fff); border: 1px solid var(--pink-line); box-shadow: var(--shadow); }
+.review-cta .stars { color: #f5a623; font-size: 1.5rem; letter-spacing: .12em; line-height: 1; }
+.review-cta h3 { margin: 8px 0 4px; color: var(--ink); }
+.review-cta p { margin: 0; color: var(--muted); max-width: 48ch; }
+@media (max-width: 700px) { .review-cta { justify-content: center; text-align: center; } }
 
 /* banner si promo */
 .banner-sec { padding: 40px 0 0; }
