@@ -35,13 +35,12 @@
         navigator.share({ title: title, text: text, url: url }).catch(function () { /* anulat */ });
       });
     }
+    var note = box.querySelector('[data-share-note]');
     if (cp) cp.addEventListener('click', function () {
-      var label = cp.querySelector('span');
       var done = function () {
-        if (!label) return;
-        var old = label.textContent;
-        label.textContent = 'Link copiat';
-        setTimeout(function () { label.textContent = old; }, 2000);
+        if (!note) return;
+        note.textContent = 'Link copiat';
+        setTimeout(function () { note.textContent = ''; }, 2000);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(done, function () { /* nu s-a putut copia */ });
