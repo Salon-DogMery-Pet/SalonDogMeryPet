@@ -17,6 +17,44 @@
     });
   }
 
+  /* ---------- distribuie (fara scripturi de la terti) ---------- */
+  var shares = document.querySelectorAll('[data-share]');
+  for (var si = 0; si < shares.length; si++) (function (box) {
+    var url = location.origin + location.pathname;
+    var title = box.getAttribute('data-title') || document.title;
+    var text = box.getAttribute('data-text') || '';
+    var wa = box.querySelector('[data-share-wa]');
+    var fb = box.querySelector('[data-share-fb]');
+    var cp = box.querySelector('[data-share-copy]');
+    var nat = box.querySelector('[data-share-native]');
+    if (wa) wa.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(title + ' ' + url);
+    if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+    if (nat && navigator.share) {
+      nat.hidden = false;
+      nat.addEventListener('click', function () {
+        navigator.share({ title: title, text: text, url: url }).catch(function () { /* anulat */ });
+      });
+    }
+    if (cp) cp.addEventListener('click', function () {
+      var label = cp.querySelector('span');
+      var done = function () {
+        if (!label) return;
+        var old = label.textContent;
+        label.textContent = 'Link copiat';
+        setTimeout(function () { label.textContent = old; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { /* nu s-a putut copia */ });
+      } else {
+        var t = document.createElement('textarea');
+        t.value = url; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        try { if (document.execCommand('copy')) done(); } catch (e) { /* ignorat */ }
+        document.body.removeChild(t);
+      }
+    });
+  })(shares[si]);
+
   /* ---------- deschis acum (ora Romaniei) ---------- */
   var badge = document.querySelector('[data-open-now]');
   if (badge) {
