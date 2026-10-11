@@ -54,6 +54,26 @@
     });
   })(shares[si]);
 
+  /* ---------- aplicatie instalabila ---------- */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function () { /* ignorat */ });
+    });
+  }
+  var installEvt = null;
+  var installBtns = document.querySelectorAll('[data-install]');
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    installEvt = e;
+    for (var ii = 0; ii < installBtns.length; ii++) installBtns[ii].hidden = false;
+  });
+  for (var ib = 0; ib < installBtns.length; ib++) installBtns[ib].addEventListener('click', function () {
+    if (!installEvt) return;
+    installEvt.prompt();
+    installEvt = null;
+    for (var k = 0; k < installBtns.length; k++) installBtns[k].hidden = true;
+  });
+
   /* ---------- deschis acum (ora Romaniei) ---------- */
   var badge = document.querySelector('[data-open-now]');
   if (badge) {

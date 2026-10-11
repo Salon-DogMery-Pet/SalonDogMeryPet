@@ -279,6 +279,7 @@ tbody th { font-weight: 600; color: var(--ink); }
 .share-btn { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; padding: 0; border-radius: 50%; border: 1.5px solid var(--pink-line); background: #fff; color: var(--pink-deep); cursor: pointer; text-decoration: none; }
 .share-btn:hover, .share-btn:focus-visible { border-color: var(--pink); background: var(--pink-soft); }
 .share-btn[hidden] { display: none; }
+.share-install { width: auto; border-radius: 999px; padding: 0 16px; font: inherit; font-weight: 700; font-size: .9rem; }
 .share-note { color: var(--green); font-size: .9rem; font-weight: 700; }
 @media (max-width: 700px) { .share-bar { justify-content: center; } }
 

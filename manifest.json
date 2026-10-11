@@ -1,0 +1,41 @@
+{
+  "name": "Frizerie canina DogMery Pet",
+  "short_name": "DogMery Pet",
+  "description": "Frizerie canina in Pitesti: tuns, spalat si ingrijire pentru caini. Preturi, program si programari.",
+  "lang": "ro",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e6399b",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Servicii si preturi",
+      "url": "servicii.html"
+    },
+    {
+      "name": "Contact si programari",
+      "url": "contact.html"
+    }
+  ]
+}
