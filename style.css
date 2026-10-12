@@ -214,6 +214,7 @@ tbody th { font-weight: 600; color: var(--ink); }
 .foot h2 { font-size: 1rem; color: #fff; margin-bottom: 12px; letter-spacing: .02em; }
 .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .foot p { margin: 0 0 10px; font-size: .97rem; }
+.foot .prog-nota { color: #bfb3c8; }
 .foot .brand { color: #fff; margin-bottom: 12px; }
 .foot .brand b { color: #ff9fd0; }
 .foot-bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid #3a2f42; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: .9rem; color: #bfb3c8; }
