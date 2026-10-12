@@ -2,7 +2,7 @@
 
 Site static pentru frizeria canina din Pitesti. Fara build.
 
-Pagini: `index.html`, `servicii.html`, `despre-noi.html`, `galerie.html`, `contact.html`, `confidentialitate.html`, `404.html`.
+Pagini: `index.html`, `servicii.html`, `tuns-caini-pitesti.html`, `despre-noi.html`, `galerie.html`, `contact.html`, `confidentialitate.html`, `404.html`.
 Resurse: `style.css`, `script.js`, `img/`, `galerie.json`, `sitemap.xml`, `robots.txt`.
 
 Google Analytics (`G-BK6D4WMY0W`) se incarca doar dupa ce vizitatorul apasa 'Accept' (vezi `script.js`).

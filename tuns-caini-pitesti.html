@@ -1,0 +1,183 @@
+---
+---
+{%- assign salon = site.data.salon -%}
+{%- assign lvd = salon.program.luni_vineri_de | split: ':' -%}{%- assign lvp = salon.program.luni_vineri_pana | split: ':' -%}{%- assign sad = salon.program.sambata_de | split: ':' -%}{%- assign sap = salon.program.sambata_pana | split: ':' -%}
+{%- capture t_lvd -%}{{ lvd[0] | plus: 0 }}:{{ lvd[1] }}{%- endcapture -%}{%- capture t_lvp -%}{{ lvp[0] | plus: 0 }}:{{ lvp[1] }}{%- endcapture -%}{%- capture t_sad -%}{{ sad[0] | plus: 0 }}:{{ sad[1] }}{%- endcapture -%}{%- capture t_sap -%}{{ sap[0] | plus: 0 }}:{{ sap[1] }}{%- endcapture -%}
+{%- assign seo_text = site.data.seo.tuns.descriere -%}{%- capture seo_desc -%}{% include seo-text.html %}{%- endcapture -%}
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.data.seo.tuns.titlu | escape }}</title>
+<meta name="description" content="{{ seo_desc }}">
+<link rel="canonical" href="https://salon-dogmery-pet.github.io/SalonDogMeryPet/tuns-caini-pitesti.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="Salon DogMery Pet">
+<meta property="og:title" content="{{ site.data.seo.tuns.titlu | escape }}">
+<meta property="og:description" content="{{ seo_desc }}">
+<meta property="og:url" content="https://salon-dogmery-pet.github.io/SalonDogMeryPet/tuns-caini-pitesti.html">
+<meta property="og:image" content="{% include seo-og.html %}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e6399b">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="DogMery Pet">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="stylesheet" href="style.css">{% include culori.html %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Acasa",
+      "item": "https://salon-dogmery-pet.github.io/SalonDogMeryPet/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tuns caini in Pitesti",
+      "item": "https://salon-dogmery-pet.github.io/SalonDogMeryPet/tuns-caini-pitesti.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#continut">Sari la continut</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Salon DogMery Pet, pagina principala"><img class="mark-img" src="img/logo-dogmery.jpg" alt="" width="44" height="44"><span>DogMery <b>Pet</b></span></a>
+    <nav class="nav" id="nav" aria-label="Meniu principal"><a href="index.html">Acasa</a><a href="servicii.html">Servicii si preturi</a><a href="despre-noi.html">Despre noi</a><a href="galerie.html">Galerie</a><a href="contact.html">Contact</a></nav>
+    <a class="btn btn-small" href="tel:+{{ salon.telefon_intl | remove: '+' }}"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-phone"/></svg> Suna</a>
+    <button class="menu-btn" type="button" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-menu"/></svg></button>
+  </div>
+</header>
+<main id="continut">
+{%- assign p = site.data.preturi %}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Acasa</a> / Tuns caini in Pitesti</p>
+    <h1>Tuns caini in Pitesti</h1>
+    <p>Tuns adaptat tipului de blana si cerintelor tale, la frizeria canina DogMery Pet din Pitesti.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Cum arata o sedinta de tuns</h2>
+    </div>
+    <p>Pachetul Doar tuns include tuns, periat, parfumat, curatat urechi si taiat unghii, fara baie. Daca vrei si baie, alegi Pachet complet, care adauga spalat si uscat.</p>
+    <p>O sedinta dureaza intre 1 h 30 min si 3 h, in functie de rasa, tipul si starea blanii si de comportamentul cainelui.</p>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Cat costa tunsul</h2>
+      <p class="muted">Preturile sunt in lei si depind de talia cainelui. La blana foarte incalcita pretul final se stabileste dupa evaluarea cainelui.</p>
+    </div>
+    <div class="cards">
+  <article class="card">
+    <h3>Doar tuns</h3>
+    <p class="includes">{{ p.tuns.descriere }}</p>
+    <ul class="prices">
+      <li><span>Talie mica</span><b>{{ p.tuns.mica }} lei</b></li>
+      <li><span>Talie medie</span><b>{{ p.tuns.medie }} lei</b></li>
+      <li><span>Talie mare</span><b>{{ p.tuns.mare }} lei</b></li>
+    </ul>
+  </article>
+  <article class="card">
+    <h3>Pachet complet</h3>
+    <p class="includes">{{ p.complet.descriere }}</p>
+    <ul class="prices">
+      <li><span>Talie mica</span><b>{{ p.complet.mica }} lei</b></li>
+      <li><span>Talie medie</span><b>{{ p.complet.medie }} lei</b></li>
+      <li><span>Talie mare</span><b>{{ p.complet.mare }} lei</b></li>
+    </ul>
+  </article>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Inainte sa vii</h2>
+    </div>
+    {% include reguli.html %}
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Intre doua tunsori</h2>
+    </div>
+    <p>Periatul regulat acasa ajuta la prevenirea nodurilor, mai ales la blana lunga sau deasa. La programare spune-ne rasa si talia cainelui.</p>
+    <p class="muted"><b>Vezi si:</b> <a href="servicii.html">Servicii si preturi</a> &middot; <a href="galerie.html">Galerie</a> &middot; <a href="contact.html">Contact</a></p>
+  </div>
+</section>
+<section class="cta">
+  <div class="wrap">
+    <h2>Programeaza-ti catelusul</h2>
+    <p>Suna sau scrie-ne pe WhatsApp si stabilim ziua si ora potrivita.</p>
+    <div class="actions center">
+      <a class="btn btn-light" href="tel:+{{ salon.telefon_intl | remove: '+' }}"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-phone"/></svg> {{ salon.telefon }}</a>
+      <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone={{ salon.telefon_intl | remove: '+' }}" rel="noopener"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-whatsapp"/></svg> Scrie pe WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="mark" aria-hidden="true">M</span><span>DogMery <b>Pet</b></span></a>
+        <p>{{ salon.text_subsol | escape }}</p>
+        <div class="socials">{%- include retele-subsol.html %}
+        </div>
+      </div>
+      <div>
+        <h2>Pagini</h2>
+        <ul>
+          <li><a href="index.html">Acasa</a></li>
+          <li><a href="servicii.html">Servicii si preturi</a></li>
+          <li><a href="tuns-caini-pitesti.html">Tuns caini in Pitesti</a></li>
+          <li><a href="despre-noi.html">Despre noi</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p>{{ salon.strada | escape }}, {{ salon.detalii_adresa | escape }}<br>{{ salon.oras | escape }}, {{ salon.cod_postal | escape }}</p>
+        <p><a href="tel:+{{ salon.telefon_intl | remove: '+' }}">{{ salon.telefon }}</a><br><a href="https://api.whatsapp.com/send?phone={{ salon.telefon_intl | remove: '+' }}" rel="noopener">WhatsApp</a></p>
+      </div>
+      <div>
+        <h2>Program</h2>{%- if salon.program_nota_scurt and salon.program_nota_scurt != '' %}
+        <p class="prog-nota">{{ salon.program_nota_scurt | escape }}</p>{%- endif %}
+        <p>Luni - Vineri: {{ t_lvd }} - {{ t_lvp }}<br>Sambata: {{ t_sad }} - {{ t_sap }}<br>Duminica: inchis</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Salon DogMery Pet. Toate drepturile rezervate.</span>
+      <span><a href="confidentialitate.html">Confidentialitate</a> &middot; <button class="linklike" type="button" data-consent-open>Setari cookie-uri</button></span>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" href="https://api.whatsapp.com/send?phone={{ salon.telefon_intl | remove: '+' }}" rel="noopener" aria-label="Scrie pe WhatsApp"><svg class="ico" aria-hidden="true"><use href="img/icons.svg#i-whatsapp"/></svg><span>WhatsApp</span></a>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie-uri" hidden>
+  <p>Folosim Google Analytics ca sa vedem cate persoane viziteaza site-ul. Se activeaza doar daca esti de acord. Detalii in <a href="confidentialitate.html">pagina de confidentialitate</a>.</p>
+  <div class="actions">
+    <button class="btn btn-small" type="button" data-consent-yes>Accept</button>
+    <button class="btn btn-small btn-ghost" type="button" data-consent-no>Refuz</button>
+  </div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
