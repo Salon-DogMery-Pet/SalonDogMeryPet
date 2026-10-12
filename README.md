@@ -47,3 +47,6 @@ Atentie: lista `sectiuni` goala = pagina fara continut intre antet si butonul fi
 
 ## Google si distribuire
 Titlul si descrierea fiecarei pagini sunt in `_data/seo.yml` (marcaje: `[telefon]`, `[pret_complet]`, `[pret_spalat_tuns]`, `[luni_vineri]`, `[sambata]`, inlocuite in `_includes/seo-text.html`). Poza de distribuire: `imagini.social.poza` (`_includes/seo-og.html`). Adresa din datele structurate vine din `salon.yml`. Butoanele roz au culori globale in `culori.yml` (`buton`, `buton_hover`, `buton_text`).
+
+## Securitate
+Ramura `main` e protejata (nu se poate sterge si nu se accepta force push). Conturile cu acces folosesc autentificare in doi pasi. Nu se pun in depozit parole, chei sau date de clienti.
